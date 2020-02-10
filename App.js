@@ -15,6 +15,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>{outputText}</Text>
       <Button title="Click Me!" onPress={()=>setOutputText('Hello World!!!')}/>
+      <Text>Clicking the button doesnt really do much</Text>
     </View>
   );
 }
