@@ -13,17 +13,20 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 // Picker
 // Slider
 // Switch
-import CreateFriend from './create_friend'
+import CreateFriend from './components/create_friend/create_friend'
+import Index from './components/index/index'
+import { View, Text, Button } from 'react-native'
 
 export default function App() {
 
-  const [outputText, setOutputText] = useState('go ahead annd click the button')
+  const [isAddMode, setIsAddMode] = useState(false);
 
   return (
     <View style={styles.container}>
-      <Text>{outputText}</Text>
-      <Button title="Click Me!" onPress={()=>setOutputText('Hello World!!!')}/>
-      
+      <Modal>
+        <CreateFriend />
+      </Modal>
+      <Index />
     </View>
   );
 }
