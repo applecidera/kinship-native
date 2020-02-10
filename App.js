@@ -6,20 +6,29 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 // Text is component like <p>
 // Button is buit in component, needs to be capital and self closing
 // Button uses onPress instead of onClick
+// Touchable
+// Image
+// TextInput
+// ScrollView
+// Picker
+// Slider
+// Switch
+import CreateFriend from './create_friend'
 
 export default function App() {
 
-  const [outputText, setOutputText] = useState('hello world...')
+  const [outputText, setOutputText] = useState('go ahead annd click the button')
 
   return (
     <View style={styles.container}>
       <Text>{outputText}</Text>
       <Button title="Click Me!" onPress={()=>setOutputText('Hello World!!!')}/>
-      <Text>Clicking the button doesnt really do much</Text>
+      
     </View>
   );
 }
 
+// stylesheet objects are used in lieu of css
 const styles = StyleSheet.create({
   container: {
     flex: 1,
