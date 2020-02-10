@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
 // {useState} is react hook that allows you to use state in functional components
 import { StyleSheet, Text, View, Button } from 'react-native';
-// stylesheet allows to use css like style properties
-// view is component like a <div>
-// text is component like <p>
-// button is buit in component, needs to be capital and self closing
+// StyleSheet allows to use css like style properties
+// View is component like a <div>
+// Text is component like <p>
+// Button is buit in component, needs to be capital and self closing
+// Button uses onPress instead of onClick
 
 export default function App() {
 
-  const [outputText, setOutputText] = useState('Hello World!!!')
+  const [outputText, setOutputText] = useState('hello world...')
 
   return (
     <View style={styles.container}>
-      <Text>hello world...</Text>
-      <Button />
+      <Text>{outputText}</Text>
+      <Button title="Click Me!" onPress={()=>setOutputText('Hello World!!!')}/>
     </View>
   );
 }
